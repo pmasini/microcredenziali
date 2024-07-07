@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microcredenziali per Docenti</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,47 +19,8 @@
             padding: 12px 0;
             text-align: center;
         }
-        nav {
-            background-color: #2563EB;
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .section {
-            padding: 60px 0;
-        }
         h2 {
             color: #1E3A8A;
-        }
-        .card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            background-color: white;
         }
         .card-title {
             display: flex;
@@ -68,9 +30,6 @@
         }
         .card-title i {
             margin-right: 10px;
-        }
-        .list-disc, .list-decimal {
-            padding-left: 20px;
         }
         .text-blue-600 {
             color: #2563EB;
@@ -122,44 +81,62 @@
     </div>
 </header>
 
-<nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
-        <ul>
-            <li><a href="#cosa-sono">Cosa sono</a></li>
-            <li><a href="#vantaggi">Vantaggi</a></li>
-            <li><a href="#implementazione">Implementazione</a></li>
-            <li><a href="#risorse">Risorse</a></li>
-        </ul>
+        <a class="navbar-brand" href="#">Microcredenziali</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#cosa-sono">Cosa sono</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#vantaggi">Vantaggi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#implementazione">Implementazione</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#risorse">Risorse</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
-<main class="container">
+<main class="container my-5">
     <section id="cosa-sono" class="section mb-16">
         <h2 class="text-3xl font-bold mb-6 text-blue-600">Cosa sono le Microcredenziali?</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="card">
-                <div class="card-title">
-                    <i class="fas fa-book-open"></i>
-                    Definizione
-                </div>
-                <div class="card-content">
-                    <p>Le microcredenziali sono certificazioni di brevi esperienze di apprendimento che attestano conoscenze, abilità e competenze specifiche. Sono progettate per essere flessibili, mirate e rilevanti per il mercato del lavoro educativo.</p>
-                    <p class="mt-4 text-sm text-gray-600">Fonte: Commissione Europea, 2021</p>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <i class="fas fa-book-open"></i>
+                            Definizione
+                        </div>
+                        <p>Le microcredenziali sono certificazioni di brevi esperienze di apprendimento che attestano conoscenze, abilità e competenze specifiche. Sono progettate per essere flessibili, mirate e rilevanti per il mercato del lavoro educativo.</p>
+                        <p class="mt-4 text-sm text-gray-600">Fonte: Commissione Europea, 2021</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-title">
-                    <i class="fas fa-award"></i>
-                    Caratteristiche chiave
-                </div>
-                <div class="card-content">
-                    <ul class="list-disc">
-                        <li>Breve durata (tipicamente 10-40 ore di apprendimento)</li>
-                        <li>Focalizzate su competenze specifiche e verificabili</li>
-                        <li>Basate su evidenze e valutazione delle competenze</li>
-                        <li>Rilasciate da enti accreditati</li>
-                        <li>Portabili e cumulabili</li>
-                    </ul>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <i class="fas fa-award"></i>
+                            Caratteristiche chiave
+                        </div>
+                        <ul class="list-disc pl-4">
+                            <li>Breve durata (tipicamente 10-40 ore di apprendimento)</li>
+                            <li>Focalizzate su competenze specifiche e verificabili</li>
+                            <li>Basate su evidenze e valutazione delle competenze</li>
+                            <li>Rilasciate da enti accreditati</li>
+                            <li>Portabili e cumulabili</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -167,32 +144,38 @@
 
     <section id="vantaggi" class="section mb-16">
         <h2 class="text-3xl font-bold mb-6 text-blue-600">Vantaggi per i Docenti</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="card">
-                <div class="card-title">
-                    <i class="fas fa-users"></i>
-                    Personalizzazione
-                </div>
-                <div class="card-content">
-                    <p>Percorsi di apprendimento flessibili e adattabili alle esigenze individuali e al contesto scolastico specifico.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-title">
-                    <i class="fas fa-arrow-right"></i>
-                    Applicazione Pratica
-                </div>
-                <div class="card-content">
-                    <p>Focus sull'applicazione immediata delle competenze acquisite nel contesto di classe.</p>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <i class="fas fa-users"></i>
+                            Personalizzazione
+                        </div>
+                        <p>Percorsi di apprendimento flessibili e adattabili alle esigenze individuali e al contesto scolastico specifico.</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-title">
-                    <i class="fas fa-award"></i>
-                    Riconoscimento
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <i class="fas fa-arrow-right"></i>
+                            Applicazione Pratica
+                        </div>
+                        <p>Focus sull'applicazione immediata delle competenze acquisite nel contesto di classe.</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <p>Certificazione formale delle competenze acquisite, spendibile per l'avanzamento di carriera.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <i class="fas fa-award"></i>
+                            Riconoscimento
+                        </div>
+                        <p>Certificazione formale delle competenze acquisite, spendibile per l'avanzamento di carriera.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -201,11 +184,11 @@
 
     <section id="implementazione" class="section mb-16">
         <h2 class="text-3xl font-bold mb-6 text-blue-600">Implementazione nelle Scuole</h2>
-        <div class="card">
-            <div class="card-title">Passi chiave per l'adozione</div>
-            <div class="card-description">Basato sulle esperienze di distretti scolastici innovativi</div>
-            <div class="card-content">
-                <ol class="list-decimal">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-title">Passi chiave per l'adozione</div>
+                <div class="card-description mb-3">Basato sulle esperienze di distretti scolastici innovativi</div>
+                <ol class="list-decimal pl-4">
                     <li>Valutazione dei bisogni formativi del corpo docente</li>
                     <li>Selezione o creazione di microcredenziali allineate agli obiettivi della scuola</li>
                     <li>Formazione di un team di supporto per i docenti</li>
@@ -216,23 +199,29 @@
         </div>
         <div class="mt-8">
             <h3 class="text-2xl font-semibold mb-4">Domande Frequenti</h3>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="card">
-                    <div class="card-title">Come si valutano le microcredenziali?</div>
-                    <div class="card-content">
-                        <p>Le microcredenziali vengono valutate attraverso l'analisi di evidenze concrete dell'applicazione delle competenze in classe, come piani di lezione, video di insegnamento o lavori degli studenti. La valutazione è spesso effettuata da esperti esterni per garantire obiettività.</p>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">Come si valutano le microcredenziali?</div>
+                            <p>Le microcredenziali vengono valutate attraverso l'analisi di evidenze concrete dell'applicazione delle competenze in classe, come piani di lezione, video di insegnamento o lavori degli studenti. La valutazione è spesso effettuata da esperti esterni per garantire obiettività.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-title">Quanto tempo richiede completare una microcredenziale?</div>
-                    <div class="card-content">
-                        <p>La durata può variare, ma tipicamente una microcredenziale richiede da 10 a 40 ore di impegno, distribuite su alcune settimane o mesi per permettere l'applicazione pratica delle competenze.</p>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">Quanto tempo richiede completare una microcredenziale?</div>
+                            <p>La durata può variare, ma tipicamente una microcredenziale richiede da 10 a 40 ore di impegno, distribuite su alcune settimane o mesi per permettere l'applicazione pratica delle competenze.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-title">Le microcredenziali sostituiscono la formazione tradizionale?</div>
-                    <div class="card-content">
-                        <p>No, le microcredenziali integrano e arricchiscono i percorsi formativi tradizionali, offrendo opportunità più flessibili e mirate di sviluppo professionale.</p>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">Le microcredenziali sostituiscono la formazione tradizionale?</div>
+                            <p>No, le microcredenziali integrano e arricchiscono i percorsi formativi tradizionali, offrendo opportunità più flessibili e mirate di sviluppo professionale.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -262,5 +251,8 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
